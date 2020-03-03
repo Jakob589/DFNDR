@@ -14,4 +14,9 @@ $ nmcli r wwan on
 
 3. make sure that gsm will autoconnect every time
 
-$nmcli c modify <name> connection.autoconnect [yes|no]
+$ nmcli c modify <name> connection.autoconnect [yes|no]
+
+4. In case it does not autoconnect run
+
+$nmcli r wwan on
+$nmcli con up id <name>
