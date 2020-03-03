@@ -16,7 +16,7 @@ $ nmcli r wwan on
 
 $ nmcli c modify <name> connection.autoconnect [yes|no]
 
-4. In case it does not autoconnect run
+4. In case it does not autoconnect run 
 
-$nmcli r wwan on
-$nmcli con up id <name>
+$ nmcli r wwan on
+$ nmcli con up id <name>
