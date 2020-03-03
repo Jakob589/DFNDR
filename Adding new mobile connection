@@ -1,0 +1,17 @@
+1. run 
+
+$ mmcli -m -L or "number from 0-10"
+
+find "primary port" of your mobile modem you are going to need it later
+
+2. run  
+$ nmcli c add type gsm ifname <interface> con-name <name> apn <operator_apn>
+$ nmcli r wwan on
+
+<interface>: write in that primary port (tty* someting)
+<name>: Costom name (Mobile)
+<operator_apn>: for HoT websi
+
+3. make sure that gsm will autoconnect every time
+
+$nmcli c modify <name> connection.autoconnect [yes|no]
