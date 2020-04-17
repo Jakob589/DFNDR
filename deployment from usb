@@ -1,0 +1,40 @@
+For deployment you are going to need:
+-  USB with 2 partitions, one bootable other contains original disk image. (Trasncend jetFlash 64gb)
+-  keyboard and mouse
+
+1. insert USB into usb 3.0 port and turn un the computer. After the "beep" pres "DEL" key on the computer
+
+IMPORTANT!!
+2. in BIOS go to -> Advanced -> Miscellaneous Configuration And set the OS support to WIN8.X
+  (if not changed system will not reboot) 
+
+3. go to the last tab and select "UEFI:JetFlash.." 
+
+4. boot from "ubuntu live"
+
+5. open terminal and insert "fdisk -l" find location of primary 1TB disk (probably /dev/sda)
+
+6. find mount location of usbdata partition (probably /media/ubuntu/usbdata)
+
+7. copy image the disk (has to be empty!) 
+"sudo dd if=/media/ubuntu/usbdata/2020-4-16-DEFENDER.img of=/dev/sda conv=fsync bs=1M status=progress"
+
+%% After compying img to the disk, it will stil look like it has all empty space.
+%% The reason for that is because it is GPT disk image and during copying i have cut of the partition table at the end of the disk
+
+8. in terminal run "gdisk /dev/sda"
+
+9. you will be prompted with in console program where you will have to input the following characters, start with:
+  - "v" (it will display disk status with at least one error . If there are NO errors you did something wrong when copying img)
+  - "x" (will put you in expert mode)
+  - "e" (will try to fix partion tables)
+  - "w" (input "Y" to confirm operation)
+  BRAVO you restored GPT partition tables
+
+10. Open gparted to check if partitions are there. There should be 500MB FAT,18GB ext4 partition and 950GB of free space.
+
+11. Right click on 18GB partiion, select "edit partition" and extend it to full 950GB 
+
+12. Reboot the computer and make sure it does not get stuck while doing so. If it does, re-do step 2.
+
+
