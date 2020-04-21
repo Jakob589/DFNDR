@@ -17,6 +17,7 @@ IMPORTANT!!
 5. open terminal and run "fdisk -l" to find location of primary 1TB disk (probably /dev/sda)
 
 6. find mount location of "usbdata" partition (probably /media/ubuntu/usbdata)
+%one way of findig-out the mount location is by going to "disks" program 
 
 7. copy image the disk (has to be empty!) 
 "sudo dd if=/media/ubuntu/usbdata/2020-4-16-DEFENDER.img of=/dev/sda conv=fsync bs=1M status=progress"
@@ -26,6 +27,7 @@ IMPORTANT!!
 %% in the next two steps you will be fixing the partition table
 
 8. in terminal run "gdisk /dev/sda"
+%add "sudo" before in case id does not work
 
 9. you will be prompted with in console program where you will have to input the following characters, start with:
   - "v" (it will display disk status with at least one error. If NO errors you did something wrong when copying img - IRONIC)
@@ -35,9 +37,9 @@ IMPORTANT!!
 
 %%BRAVO you restored GPT partition table
 
-10. Open gparted to check if partitions are there. There should be 500MB FAT,18GB ext4 partition and 950GB of free space.
+10. Open "gparted" program to check if partitions are there. There should be 500MB FAT,18GB ext4 partition and 950GB of free space.
 
-11. Right click on 18GB partiion, select "edit partition" and extend it to full 950GB 
+11. In "gparted" Right click on 18GB partiion, select "edit partition" and extend it to full 950GB 
 
 12. Reboot the computer and make sure it does not get stuck while doing so. If it does, re-do step 2.
 
