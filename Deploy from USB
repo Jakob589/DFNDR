@@ -51,5 +51,6 @@ then check if it logged in to videk sensor managnet system. Write down machine-i
 
 14. Check connectivity!! in order for the system and services (rundeck, videk,ssh) to work properly it needs good connection 
 (At least 3 bars or ping the machine - RTT around 100ms is good enough)
-% Leave the ping running for few minutes and repeat multiple times. If you ever see lost packets or bizare RTT of 1000ms+,
-% then try moving it to place with better coverage
+%% Leave the ping running for few minutes and repeat multiple times. If you ever see lost packets or bizare RTT of 1000ms+,
+%% try moving it to place with better coverage.
+%% Good connectivity is essential part in order for system to work and be mantained properly! 
