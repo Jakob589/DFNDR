@@ -1,3 +1,6 @@
+Before installing defender permanently please check singal strenght, in order to check the signal strenght you will have to go
+trough all 13 steps below. 
+
 For deployment you are going to need:
 -  USB with 2 partitions, one bootable other contains original disk image. (Trasncend jetFlash 64gb)
 -  keyboard and mouse
@@ -48,3 +51,5 @@ then check if it logged in to videk sensor managnet system. Write down machine-i
 
 14. Check connectivity!! in order for the system and services (rundeck, videk,ssh) to work properly it needs good connection 
 (At least 3 bars or ping the machine - RTT around 100ms is good enough)
+% Leave the ping running for few minutes and repeat multiple times. If you ever see lost packets or bizare RTT of 1000ms+,
+% then try moving it to place with better coverage
