@@ -44,4 +44,4 @@ IMPORTANT!!
 then check if it logged in to videk sensor managnet system. Write down machine-id and link it with meaningful location
 
 14. Check connectivity!! in order for the system and services (rundeck, videk,ssh) to work properly it needs good connection 
-(At least 3 bars or ping the machine - RTT ardound 100ms is good enough)
+(At least 3 bars or ping the machine - RTT around 100ms is good enough)
