@@ -23,6 +23,7 @@ IMPORTANT!!
 
 %% After copying img to the disk, it will look like it is empty.
 %% The reason for that is because it is GPT disk image and during copying i have cut of the partition table at the end of the disk.
+%% in the next two steps you will be fixing the partition table
 
 8. in terminal run "gdisk /dev/sda"
 
