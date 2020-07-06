@@ -1,6 +1,6 @@
 1. run 
 
-$ mmcli -m -L or "number from 0-10"
+$ mmcli -m -L or "mmcli -m 0" !! mmcli not nmcli !!
 
 find "primary port" of your mobile modem you are going to need it later
 
@@ -8,7 +8,8 @@ find "primary port" of your mobile modem you are going to need it later
 $ nmcli c add type gsm ifname <interface> con-name <name> apn <operator_apn>
 $ nmcli r wwan on
 
-<interface>: write in that primary port (tty* someting)
+cheatsheet:
+<interface>: write that primary port here (tty* someting)
 <name>: Costom name (Mobile)
 <operator_apn>: for HoT websi
 
