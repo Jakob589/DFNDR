@@ -1,0 +1,9 @@
+1. boot from usb
+2. in case you need system to have unique machine id mount the partition and delete the machine id (dont delete the file just text inside it)
+3. run fdisk -l, find disk you want to copy and write down end number of sector on the disk 
+4. run sudo dd comand "dd if=/dev/sdX of=/mount_location_of_target count=number_of_sectors_+_1 conv=sync status=progress"
+
+to restore the image 
+
+1. format the disk to you want to restore the image to
+2. run "dd if=/location_of_the_image of=/dev/sdX conv=sync status=progress bs=1M"
